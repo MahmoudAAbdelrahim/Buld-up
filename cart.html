@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سلة المشتريات | Buld up</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #f4f6f8;
+      font-family: 'Cairo', sans-serif;
+    }
+    .navbar {
+      background-color: #0d47a1;
+    }
+    .navbar-brand {
+      color: #2563eb !important;
+      font-weight: bold;
+    }
+    .btn-logout {
+      background-color: #e53935;
+      color: white;
+      border: none;
+      transition: 0.3s;
+    }
+    .btn-logout:hover {
+      background-color: #c62828;
+    }
+    .card {
+      border: none;
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 🔹 شريط التنقل -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="fa-solid fa-store me-2"></i> Buld up</a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="index.html" class="btn btn-outline-primary"><i class="fa-solid fa-house"></i> الرئيسية</a>
+        <button class="btn btn-outline-danger" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> خروج</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔹 محتوى الصفحة -->
+  <div class="container" style="margin-top: 100px;">
+    <h2 class="fw-bold mb-4 text-center text-primary"> سلة المشتريات</h2>
+
+    <!-- مكان عرض المنتجات داخل السلة -->
+    <div id="cartContainer" class="row g-4"></div>
+
+    <!-- الإجمالي وطرق الدفع -->
+    <div class="text-center mt-5">
+      <h4 class="fw-bold">الإجمالي: <span id="totalPrice" class="text-success">0</span> جنيه</h4>
+
+      <div class="my-3">
+        <label class="fw-bold me-2">طريقة الدفع:</label>
+        <select id="paymentMethod" class="form-select w-50 mx-auto border-primary">
+          <option value="cash">كاش عند الاستلام</option>
+          <option value="visa">فيزا</option>
+        </select>
+      </div>
+
+      <button id="checkoutBtn" class="btn btn-primary px-4 py-2 mt-2">
+        <i class="bi bi-credit-card"></i> إكمال الشراء
+      </button>
+    </div>
+  </div>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>

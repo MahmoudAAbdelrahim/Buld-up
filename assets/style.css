@@ -1,0 +1,44 @@
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+/* البطاقات */
+.card {
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* العناوين */
+h2, h3 {
+  letter-spacing: 0.5px;
+}
+
+/* الأزرار */
+.btn-primary {
+  background-color: #1d4ed8;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+
+.btn-danger {
+  background-color: #dc2626;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c;
+}
+
+/* الجداول */
+.table th {
+  background-color: #eff6ff !important;
+}
+
+
+
